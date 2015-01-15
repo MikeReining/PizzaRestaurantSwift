@@ -58,7 +58,7 @@ class Kitchen {
         }
 
         
-        return Pizza(size: .Small, toppings: toppings)
+        return pizza
     }
     
 
