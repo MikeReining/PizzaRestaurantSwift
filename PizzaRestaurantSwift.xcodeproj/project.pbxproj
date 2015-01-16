@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		272403ED1A697CFE00951C00 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272403EC1A697CFE00951C00 /* Pizza.swift */; };
+		272403EF1A697D1B00951C00 /* Topping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272403EE1A697D1B00951C00 /* Topping.swift */; };
+		272403F11A697D4D00951C00 /* Kitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272403F01A697D4D00951C00 /* Kitchen.swift */; };
+		272403F31A697DDC00951C00 /* RestuarantManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272403F21A697DDC00951C00 /* RestuarantManager.swift */; };
 		27A66B321A68580B009930A1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A66B311A68580B009930A1 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +27,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		272403EC1A697CFE00951C00 /* Pizza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		272403EE1A697D1B00951C00 /* Topping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topping.swift; sourceTree = "<group>"; };
+		272403F01A697D4D00951C00 /* Kitchen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kitchen.swift; sourceTree = "<group>"; };
+		272403F21A697DDC00951C00 /* RestuarantManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestuarantManager.swift; sourceTree = "<group>"; };
 		27A66B2E1A68580B009930A1 /* PizzaRestaurantSwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PizzaRestaurantSwift; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A66B311A68580B009930A1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		27A66B381A685826009930A1 /* Kitchen.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Kitchen.playground; path = ../Kitchen.playground; sourceTree = "<group>"; };
@@ -59,7 +67,11 @@
 			isa = PBXGroup;
 			children = (
 				27A66B311A68580B009930A1 /* main.swift */,
+				272403F21A697DDC00951C00 /* RestuarantManager.swift */,
 				27A66B381A685826009930A1 /* Kitchen.playground */,
+				272403F01A697D4D00951C00 /* Kitchen.swift */,
+				272403EC1A697CFE00951C00 /* Pizza.swift */,
+				272403EE1A697D1B00951C00 /* Topping.swift */,
 			);
 			path = PizzaRestaurantSwift;
 			sourceTree = "<group>";
@@ -120,7 +132,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272403EF1A697D1B00951C00 /* Topping.swift in Sources */,
+				272403ED1A697CFE00951C00 /* Pizza.swift in Sources */,
+				272403F11A697D4D00951C00 /* Kitchen.swift in Sources */,
 				27A66B321A68580B009930A1 /* main.swift in Sources */,
+				272403F31A697DDC00951C00 /* RestuarantManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +251,7 @@
 				27A66B371A68580B009930A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,3 +10,6 @@ import Foundation
 
 println("Hello, World!")
 
+var myAwesomeKitchen = Kitchen(name: "myAwesomeKitchen")
+
+myAwesomeKitchen.makeLargePepperoniPizza()
