@@ -8,8 +8,11 @@
 
 import Foundation
 
-println("Hello, World!")
-
 var myAwesomeKitchen = Kitchen(name: "myAwesomeKitchen")
 
-myAwesomeKitchen.makeLargePepperoniPizza()
+var manager = Manager()
+
+// Setup Kitchen Delegate at run time
+myAwesomeKitchen.kitchenDelegate = manager
+
+myAwesomeKitchen.makePepperoniPizza()
