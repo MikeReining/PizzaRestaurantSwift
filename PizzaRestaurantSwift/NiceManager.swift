@@ -1,5 +1,5 @@
 //
-//  Manager.swift
+//  NiceManager.swift
 //  PizzaRestaurantSwift
 //
 //  Created by Michael Reining on 1/16/15.
@@ -8,27 +8,23 @@
 
 import Foundation
 
-
-class Manager: KitchenDelegate {
+class NiceManager: KitchenDelegate {
     
     // The Kitchen Manager conforms to the KitchenDelegate
     
     func kitchenOrder(kitchen: Kitchen, shouldMakePizzaOfSize: Pizza, withToppings: [Topping]) -> Bool {
-        for topping in withToppings {
-            if topping.name == "anchovies" {
-                println("Manager says: You can have any toppings you like")
-            }
-        }
+
         
         return true
     }
     
     func kitchenShouldUpgradeOrder(kitchen: Kitchen) -> Bool {
+        println("Nice manager says: You get large pizza's for free")
+
         return true
     }
     
     func kitchenDidMakePizza(kitchen: Kitchen) {
-    
+        
     }
 }
-

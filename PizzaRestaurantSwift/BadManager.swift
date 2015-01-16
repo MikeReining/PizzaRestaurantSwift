@@ -1,5 +1,5 @@
 //
-//  Manager.swift
+//  BadManager.swift
 //  PizzaRestaurantSwift
 //
 //  Created by Michael Reining on 1/16/15.
@@ -8,15 +8,16 @@
 
 import Foundation
 
-
-class Manager: KitchenDelegate {
+class BadManager: KitchenDelegate {
     
     // The Kitchen Manager conforms to the KitchenDelegate
     
     func kitchenOrder(kitchen: Kitchen, shouldMakePizzaOfSize: Pizza, withToppings: [Topping]) -> Bool {
+        
         for topping in withToppings {
             if topping.name == "anchovies" {
-                println("Manager says: You can have any toppings you like")
+                println("Bad manager says: I make no anchovie pizzas")
+                return false
             }
         }
         
@@ -24,11 +25,11 @@ class Manager: KitchenDelegate {
     }
     
     func kitchenShouldUpgradeOrder(kitchen: Kitchen) -> Bool {
-        return true
+        println("Bad manager says: No upgrades for you")
+        return false
     }
     
     func kitchenDidMakePizza(kitchen: Kitchen) {
-    
+        
     }
 }
-

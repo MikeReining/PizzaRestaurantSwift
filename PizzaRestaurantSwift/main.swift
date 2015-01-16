@@ -13,6 +13,18 @@ var myAwesomeKitchen = Kitchen(name: "myAwesomeKitchen")
 var manager = Manager()
 
 // Setup Kitchen Delegate at run time
+
 myAwesomeKitchen.kitchenDelegate = manager
 
 myAwesomeKitchen.makePepperoniPizza()
+myAwesomeKitchen.makeAnchoviesPizza()
+
+var badManager = BadManager()
+
+myAwesomeKitchen.kitchenDelegate = badManager
+
+myAwesomeKitchen.makeAnchoviesPizza()
+
+var niceManager = NiceManager()
+myAwesomeKitchen.kitchenDelegate = niceManager
+myAwesomeKitchen.makeAnchoviesPizza()

@@ -17,35 +17,73 @@ class Kitchen {
     // setup delegate variable
     var kitchenDelegate: KitchenDelegate? 
 
-    func makePepperoniPizza() -> Pizza {
+//    func makePizza() -> Pizza? {
+//        pepperoniToppings()
+//        var pizza = Pizza(size: .Small, toppings: pepperoniToppings())
+//        println("new make pizza method")
+//        return pizza
+//    }
+    
+    
+    
+    func pepperoniToppings() -> [Topping] {
         var peperoni = Topping(name: "Pepperoni")
         var cheese = Topping(name: "Cheese")
         var toppings = [peperoni,cheese]
+        return toppings
+    }
+    
+    
+    func makePepperoniPizza() -> Pizza? {
+        pepperoniToppings()
         
-        var pizza = Pizza(size: .Small, toppings: toppings)
-        
-        
+        var pizza = Pizza(size: .Small, toppings: pepperoniToppings())
         if let kd = kitchenDelegate {
-            if kd.kitchenShouldUpgradeOrder(self) {
-                pizza.size = .Large
-                println("KITCHEN DELEGATE SAYS: shouldUpgradeOrder")
-            }
             
-            if kd.kitchenOrder(self, shouldMakePizzaOfSize: pizza, withToppings: toppings) {
-                println("KITCHEN DELEGATE SAYS: shouldMakePizzaOfSize")
-                println("Pizza Size: \(pizza.size.printName())")
-                print("Pizza Toppings: ")
-                for topping in toppings {
-                    print("\(topping.name), ")
-                }
-            } else {
-            println("KITCHEN DELEGATE SAYS: MAKE NO PIZZA")
+            let shouldMake: Bool = kd.kitchenOrder(self, shouldMakePizzaOfSize: pizza, withToppings: pepperoniToppings())
+
+            if !shouldMake {
+                return nil
             }
          
-            
+            if kd.kitchenShouldUpgradeOrder(self) {
+                pizza.size = .Large
+            }
         }
-        return pizza
+
+        if let kd = kitchenDelegate {
+            kd.kitchenDidMakePizza(self)
+            println("Here is your \(pizza.size.printName()) Pepperoni Pizza")
+            return pizza
+        }
+        return nil
     }
+    
+    func makeAnchoviesPizza() -> Pizza? {
+        var anchovies = Topping(name: "anchovies")
+        var cheese = Topping(name: "cheese")
+        var toppings = [anchovies,cheese]
+        var pizza = Pizza(size: .Small, toppings: toppings)
+        if let kd = kitchenDelegate {
+
+            let shouldMake = kd.kitchenOrder(self, shouldMakePizzaOfSize: pizza, withToppings: toppings)
+            
+            if !shouldMake {
+            }
+            
+            if kd.kitchenShouldUpgradeOrder(self) {
+                
+            }
+        }
+        
+        if let kd = kitchenDelegate {
+            kd.kitchenDidMakePizza(self)
+            return pizza
+        }
+        return nil
+    }
+    
+    
 
     
 }

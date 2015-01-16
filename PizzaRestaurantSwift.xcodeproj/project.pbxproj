@@ -13,6 +13,8 @@
 		2798D6111A699A1400C85455 /* KitchenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2798D6101A699A1400C85455 /* KitchenDelegate.swift */; };
 		2798D6131A699BA100C85455 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2798D6121A699BA100C85455 /* Manager.swift */; };
 		27A66B321A68580B009930A1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A66B311A68580B009930A1 /* main.swift */; };
+		27BE86B21A69A6AC00AFEC58 /* BadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BE86B11A69A6AC00AFEC58 /* BadManager.swift */; };
+		27CDD2971A69AEEC00A134B6 /* NiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDD2961A69AEEC00A134B6 /* NiceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +38,8 @@
 		27A66B2E1A68580B009930A1 /* PizzaRestaurantSwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PizzaRestaurantSwift; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A66B311A68580B009930A1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		27A66B381A685826009930A1 /* Kitchen.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Kitchen.playground; path = ../Kitchen.playground; sourceTree = "<group>"; };
+		27BE86B11A69A6AC00AFEC58 /* BadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadManager.swift; sourceTree = "<group>"; };
+		27CDD2961A69AEEC00A134B6 /* NiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 				27A66B311A68580B009930A1 /* main.swift */,
 				2798D6101A699A1400C85455 /* KitchenDelegate.swift */,
 				2798D6121A699BA100C85455 /* Manager.swift */,
+				27BE86B11A69A6AC00AFEC58 /* BadManager.swift */,
+				27CDD2961A69AEEC00A134B6 /* NiceManager.swift */,
 				27A66B381A685826009930A1 /* Kitchen.playground */,
 				272403F01A697D4D00951C00 /* Kitchen.swift */,
 				272403EC1A697CFE00951C00 /* Pizza.swift */,
@@ -136,10 +142,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				272403EF1A697D1B00951C00 /* Topping.swift in Sources */,
+				27BE86B21A69A6AC00AFEC58 /* BadManager.swift in Sources */,
 				2798D6111A699A1400C85455 /* KitchenDelegate.swift in Sources */,
 				272403ED1A697CFE00951C00 /* Pizza.swift in Sources */,
 				272403F11A697D4D00951C00 /* Kitchen.swift in Sources */,
 				2798D6131A699BA100C85455 /* Manager.swift in Sources */,
+				27CDD2971A69AEEC00A134B6 /* NiceManager.swift in Sources */,
 				27A66B321A68580B009930A1 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
