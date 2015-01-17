@@ -11,13 +11,14 @@ import Foundation
 class DeliveryService {
     var name: String
     var pizzasDelivered: [Pizza]?
-//    var deliveryCar: DeliveryCar(
+    var deliveryCar = DeliveryCar(carID: 1)
     var pizzasDeliveredCounter: Int = 0
     init(name: String) {
         self.name = name
     }
     
     func deliverPizza (pizza: Pizza) {
+        deliveryCar.deliverPizza(pizza)
         pizzasDeliveredCounter += 1
         if pizzasDelivered == nil {
             pizzasDelivered = [Pizza]()

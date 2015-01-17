@@ -14,7 +14,7 @@ class DeliveryCar {
         self.carID = carID
     }
     func deliverPizza (pizza: Pizza) {
-        
+        println("Car says: Pizza delivered")
     }
 }
 
