@@ -11,8 +11,10 @@ import Foundation
 
 class Manager: KitchenDelegate {
     var managerType: ManagerType
-    init(managerType: ManagerType) {
+    var deliveryService: DeliveryService
+    init(managerType: ManagerType, deliveryService: DeliveryService) {
         self.managerType = managerType
+        self.deliveryService = deliveryService
     }
     // The Kitchen Manager conforms to the KitchenDelegate
     
@@ -57,7 +59,7 @@ class Manager: KitchenDelegate {
         
     }
     
-    func kitchenDidMakePizza(kitchen: Kitchen) {
+    func kitchenDidMakePizza(kitchen: Kitchen,pizza: Pizza) {
         println("")
         println("Question: Was Pizza Made?")
         switch managerType {
@@ -67,8 +69,8 @@ class Manager: KitchenDelegate {
             println("Manager says: Here is your pizza")
         case .Bad:
             println("Manager says: Yes, now go away")
-    
         }
+        deliveryService.deliverPizza(pizza)
     }
 
 enum ManagerType {

@@ -14,7 +14,7 @@ protocol KitchenDelegate {
     
     func kitchenShouldUpgradeOrder(kitchen: Kitchen) -> Bool
     
-    func kitchenDidMakePizza(kitchen: Kitchen)
+    func kitchenDidMakePizza(kitchen: Kitchen, pizza: Pizza)
     
 }
 

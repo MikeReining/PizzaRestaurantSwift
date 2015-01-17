@@ -9,8 +9,9 @@
 import Foundation
 
 
-// Setup Kitchen
-var myAwesomeKitchen = Kitchen(name: "myAwesomeKitchen")
+// Setup Kitchen and Delivery Service
+var kitchen = Kitchen(name: "Awesome Kitchen")
+var deliveryService = DeliveryService(name: "Awesome Delivery Service")
 
 // Add Toppings
 var cheese = Topping(name: "cheese")
@@ -26,9 +27,9 @@ println("GOOD MANAGER")
 
 // Setup Kitchen Delegate at run time
 
-var regularManager = Manager(managerType: .Regular)
-myAwesomeKitchen.kitchenDelegate = regularManager
-myAwesomeKitchen.makePizza(Pizza(size: .Small, toppings: [cheese,pepperoni]))
+var regularManager = Manager(managerType: .Regular, deliveryService: deliveryService)
+kitchen.kitchenDelegate = regularManager
+kitchen.makePizza(Pizza(size: .Small, toppings: [cheese,pepperoni]))
 println("")
 
 // Example with BAD Manager pepperoni pizza
@@ -36,9 +37,9 @@ println("")
 println("------------")
 println("BAD MANAGER: Pepperoni Pizza")
 
-var badManager = Manager(managerType: .Bad)
-myAwesomeKitchen.kitchenDelegate = badManager
-myAwesomeKitchen.makePizza(Pizza(size: .Small, toppings: [cheese,pepperoni]))
+var badManager = Manager(managerType: .Bad, deliveryService: deliveryService)
+kitchen.kitchenDelegate = badManager
+kitchen.makePizza(Pizza(size: .Small, toppings: [cheese,pepperoni]))
 println("")
 
 // Example with BAD Manager anchovies pizza
@@ -46,7 +47,7 @@ println("")
 println("------------")
 println("BAD MANAGER: Anchovies Pizza")
 
-myAwesomeKitchen.makePizza(Pizza(size: .Small, toppings: [cheese,anchovies]))
+kitchen.makePizza(Pizza(size: .Small, toppings: [cheese,anchovies]))
 println("")
 
 
@@ -56,11 +57,13 @@ println("")
 println("------------")
 println("NICE MANAGER")
 
-var niceManager = Manager(managerType: .Nice)
-myAwesomeKitchen.kitchenDelegate = niceManager
-myAwesomeKitchen.makePizza(Pizza(size: .Small, toppings: [cheese,pepperoni]))
+var niceManager = Manager(managerType: .Nice, deliveryService: deliveryService)
+kitchen.kitchenDelegate = niceManager
+kitchen.makePizza(Pizza(size: .Small, toppings: [cheese,pepperoni]))
 println("")
 
 println("------------")
 println("NICE MANAGER ANCHOVIES")
-myAwesomeKitchen.makePizza(Pizza(size: .Small, toppings: [cheese,anchovies]))
+kitchen.makePizza(Pizza(size: .Small, toppings: [cheese,anchovies]))
+
+deliveryService.printAllPizzasDelivered()

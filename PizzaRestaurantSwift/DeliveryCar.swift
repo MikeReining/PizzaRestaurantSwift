@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+class DeliveryCar {
+    var carID: Int
+    init(carID: Int) {
+        self.carID = carID
+    }
+    func deliverPizza (pizza: Pizza) {
+        
+    }
+}
+
+

@@ -18,7 +18,6 @@ class Kitchen {
     var kitchenDelegate: KitchenDelegate?
     
     func makePizza(pizza: Pizza) -> Pizza? {
-
         
         if let kd = kitchenDelegate {
             
@@ -32,13 +31,9 @@ class Kitchen {
             if kd.kitchenShouldUpgradeOrder(self) {
                 pizza.size = .Large
             }
-        }
-        
-        if let kd = kitchenDelegate {
-            kd.kitchenDidMakePizza(self)
+            kd.kitchenDidMakePizza(self, pizza: pizza)
             return pizza
         }
         return nil
     }
-    
 }
