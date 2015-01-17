@@ -71,5 +71,17 @@ var myAwesomeKitchen = Kitchen(name: "myAwesomeKitchen")
 
 myAwesomeKitchen.makeLargePepperoniPizza()
 
+enum Type {
+    case Nice, Regular, Bad
+}
 
+var managerType: Type = .Regular
+switch managerType {
+case .Nice:
+    println("NICE Manager says: You can have any toppings you like")
+case .Regular:
+            println("REGULAR Manager says: You can have any toppings you like")
+case .Bad:
+            println("Bad manager says: I make no anchovie pizzas")
+}
 

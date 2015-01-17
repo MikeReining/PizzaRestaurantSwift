@@ -10,7 +10,7 @@ import Foundation
 
 protocol KitchenDelegate {
     
-    func kitchenOrder(kitchen: Kitchen, shouldMakePizzaOfSize: Pizza, withToppings: [Topping]) -> Bool
+    func kitchenOrder(kitchen: Kitchen, shouldMakePizzaOfSize: PizzaSize, withToppings: [Topping]) -> Bool
     
     func kitchenShouldUpgradeOrder(kitchen: Kitchen) -> Bool
     
